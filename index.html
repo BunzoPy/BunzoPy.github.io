@@ -1,7 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BunzoPy</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #39ff14;
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+      padding: 0 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #39ff14;
+      transition: 0.3s;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #39ff14;
+    }
+
+    .titulo {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 1.8rem;
+      font-family: 'Courier New', monospace;
+      font-weight: normal;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .logos img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .creditos {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 50px;
+      font-style: italic;
+    }
+
+    .creditos a {
+      color: #39ff14;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .logos {
+        flex-direction: column;
+      }
+
+      .titulo {
+        font-size: 1.4rem;
+      }
+
+      .descripcion {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <nav>
+    <a href="/">Página Principal</a>
+    <a href="https://beacons.ai/bunzopy" target="_blank">Redes Sociales</a>
+    <a href="https://github.com/bunzopy" target="_blank">Proyectos</a>
+    <a href="mailto:guido.cerraburu@gmail.com">Contacto</a>
+    <a href="/writeups">WriteUps</a>
+  </nav>
+
+  <h1 class="titulo">Guido Landeras Cerraburu (aka. BunzoPy)</h1>
+
+  <div class="logos">
+    <img src="logo1.png" alt="Logo 1" />
+    <img src="logo2.png" alt="Logo 2" />
+  </div>
+
+  <div class="descripcion">
+    <p>¡Hola! Soy Guido, tengo 26 años y hace unos 6 meses empecé a estudiar ciberseguridad. Actualmente trabajo como delivery mientras estudio, vivo con mi novia y tenemos un gato llamado León, que seguramente se va a colar en más de un stream 🐱.</p>
+
+    <p>Hago directos en Twitch de lunes a viernes a las 12 PM (hora Argentina UTC -3). Acompáñame para disfrutar de contenido variado, aprender juntos sobre ciberseguridad y compartir el proceso, los errores y los logros en un ambiente relajado y divertido. ¡No olvides seguirme para no perderte los streamings!</p>
+  </div>
+
+  <div class="creditos">
+	<p>Desarrollado en 2025 por <strong>BunzoPy</strong>, con asistencia de <strong>ChatGPT</strong> para el desarrollo y contenido. La idea base de este diseño proviene de <a href="https://gunzf0x.github.io/" target="_blank" style="color: #39ff14; text-decoration: none;"><strong>gunzf0x</strong></a>.</p>
+
+  </div>
+
 </body>
 </html>
