@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WriteUps | BunzoPy</title>
+<style>
+  /* Estilo consola negro + verde */
+  html, body {
+    margin: 0; padding: 0;
+    background-color: #000;
+    color: #39ff14;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #39ff14;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    text-shadow: 0 0 10px #39ff14;
+  }
+
+  .contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 80px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  ul.writeup-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  ul.writeup-list li {
+    margin-bottom: 15px;
+    display: none; /* oculto por defecto, JS mostrará */
+  }
+
+  .writeup-item {
+    display: flex;
+    align-items: center;
+    border: 1.8px solid #39ff14;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: rgba(57, 255, 20, 0.12);
+    color: #39ff14;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 0 8px #39ff14;
+    transition: all 0.3s ease;
+  }
+
+  .writeup-item:hover {
+    background: rgba(57, 255, 20, 0.28);
+    box-shadow: 0 0 18px #39ff14, inset 0 0 15px #39ff14;
+  }
+
+  .numero {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    min-width: 38px;
+    text-align: center;
+    margin-right: 18px;
+    padding: 4px 8px;
+    border: 2px solid #39ff14;
+    border-radius: 6px;
+    background-color: #000;
+    box-shadow: 0 0 7px #39ff14;
+  }
+
+  .writeup-item h2 {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  @media (max-width: 768px) {
+    .writeup-item {
+      font-size: 1.1rem;
+      padding: 12px 16px;
+    }
+    .numero {
+      min-width: 30px;
+      font-size: 0.9rem;
+      margin-right: 12px;
+      padding: 3px 6px;
+    }
+  }
+
+  .paginacion {
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+
+  .paginacion button {
+    font-family: 'Courier New', monospace;
+    background: none;
+    border: 1.5px solid #39ff14;
+    color: #39ff14;
+    font-size: 1.2rem;
+    padding: 7px 15px;
+    margin: 0 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .paginacion button:hover {
+    background: #39ff14;
+    color: #000;
+    box-shadow: 0 0 12px #39ff14;
+  }
+
+  .paginacion button.active {
+    background: #39ff14;
+    color: #000;
+    cursor: default;
+    box-shadow: 0 0 18px #39ff14;
+  }
+
+  .creditos {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: #39ff14;
+    font-size: 1rem;
+  }
+
+  .creditos a {
+    color: #39ff14;
+    text-decoration: none;
+  }
+
+  .creditos a:hover {
+    text-shadow: 0 0 10px #39ff14;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">Página Principal</a>
+  <a href="https://beacons.ai/bunzopy" target="_blank">Redes Sociales</a>
+  <a href="https://github.com/bunzopy" target="_blank">Proyectos</a>
+  <a href="mailto:guido.cerraburu@gmail.com">Contacto</a>
+  <a href="https://publish.obsidian.md/bunzopy/Bienvenida+y+redes+sociales" target="_blank">Apuntes</a>
+  <a href="/writeups">WriteUps</a>
+</nav>
+
+<div class="contenedor">
+  <h1>WriteUps</h1>
+
+  <ul class="writeup-list" id="writeup-list">
+    <!-- Lista completa con data-index y links -->
+    <li data-index="1"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Writeup" target="_blank" class="writeup-item"><span class="numero">1</span><h2>Writeup</h2></a></li>
+    <li data-index="2"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Shocker" target="_blank" class="writeup-item"><span class="numero">2</span><h2>Shocker</h2></a></li>
+    <li data-index="3"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Valentine" target="_blank" class="writeup-item"><span class="numero">3</span><h2>Valentine</h2></a></li>
+    <li data-index="4"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/GoodGames" target="_blank" class="writeup-item"><span class="numero">4</span><h2>GoodGames</h2></a></li>
+    <li data-index="5"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Curling" target="_blank" class="writeup-item"><span class="numero">5</span><h2>Curling</h2></a></li>
+    <li data-index="6"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Meow" target="_blank" class="writeup-item"><span class="numero">6</span><h2>Meow</h2></a></li>
+    <li data-index="7"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Fawn" target="_blank" class="writeup-item"><span class="numero">7</span><h2>Fawn</h2></a></li>
+    <li data-index="8"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Windows/Dancing" target="_blank" class="writeup-item"><span class="numero">8</span><h2>Dancing</h2></a></li>
+    <li data-index="9"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/LinuxRedeemer" target="_blank" class="writeup-item"><span class="numero">9</span><h2>Redeemer</h2></a></li>
+    <li data-index="10"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Windows/Dancing" target="_blank" class="writeup-item"><span class="numero">10</span><h2>Explosion</h2></a></li>
+    <li data-index="11"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Preignition" target="_blank" class="writeup-item"><span class="numero">11</span><h2>Preignition</h2></a></li>
+    <li data-index="12"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Mongod" target="_blank" class="writeup-item"><span class="numero">12</span><h2>Mongod</h2></a></li>
+    <li data-index="13"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Synced" target="_blank" class="writeup-item"><span class="numero">13</span><h2>Synced</h2></a></li>
+    <li data-index="14"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Appointment" target="_blank" class="writeup-item"><span class="numero">14</span><h2>Appointment</h2></a></li>
+    <li data-index="15"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Sequel" target="_blank" class="writeup-item"><span class="numero">15</span><h2>Sequel</h2></a></li>
+    <li data-index="16"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Crocodile" target="_blank" class="writeup-item"><span class="numero">16</span><h2>Crocodile</h2></a></li>
+    <li data-index="17"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier%201/Windows/Responder" target="_blank" class="writeup-item"><span class="numero">17</span><h2>Responder</h2></a></li>
+    <li data-index="18"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Three" target="_blank" class="writeup-item"><span class="numero">18</span><h2>Three</h2></a></li>
+    <li data-index="19"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linuxy/Ignition" target="_blank" class="writeup-item"><span class="numero">19</span><h2>Ignition</h2></a></li>
+    <li data-index="20"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Bike" target="_blank" class="writeup-item"><span class="numero">20</span><h2>Bike</h2></a></li>
+    <li data-index="21"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Funnel" target="_blank" class="writeup-item"><span class="numero">21</span><h2>Funnel</h2></a></li>
+    <li data-index="22"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Pennyworth" target="_blank" class="writeup-item"><span class="numero">22</span><h2>Pennyworth</h2></a></li>
+    <li data-index="23"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Windows/Tactics" target="_blank" class="writeup-item"><span class="numero">23</span><h2>Tactics</h2></a></li>
+    <li data-index="24"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Windows/Archetype" target="_blank" class="writeup-item"><span class="numero">24</span><h2>Archetype</h2></a></li>
+    <li data-index="25"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Oopsie" target="_blank" class="writeup-item"><span class="numero">25</span><h2>Oopsie</h2></a></li>
+    <li data-index="26"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Vaccine" target="_blank" class="writeup-item"><span class="numero">26</span><h2>Vaccine</h2></a></li>
+    <li data-index="27"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Unified" target="_blank" class="writeup-item"><span class="numero">27</span><h2>Unified</h2></a></li>
+    <li data-index="28"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Included" target="_blank" class="writeup-item"><span class="numero">28</span><h2>Included</h2></a></li>
+    <li data-index="29"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Windows/Markup" target="_blank" class="writeup-item"><span class="numero">29</span><h2>Markup</h2></a></li>
+    <li data-index="30"><a href="https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Base" target="_blank" class="writeup-item"><span class="numero">30</span><h2>Base</h2></a></li>
+    <li data-index="31"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Legacy" target="_blank" class="writeup-item"><span class="numero">31</span><h2>Legacy</h2></a></li>
+    <li data-index="32"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Lame" target="_blank" class="writeup-item"><span class="numero">32</span><h2>Lame</h2></a></li>
+    <li data-index="33"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Jerry" target="_blank" class="writeup-item"><span class="numero">33</span><h2>Jerry</h2></a></li>
+    <li data-index="34"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Cap" target="_blank" class="writeup-item"><span class="numero">34</span><h2>Cap</h2></a></li>
+    <li data-index="35"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Netmon" target="_blank" class="writeup-item"><span class="numero">35</span><h2>Netmon</h2></a></li>
+    <li data-index="36"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Knife" target="_blank" class="writeup-item"><span class="numero">36</span><h2>Knife</h2></a></li>
+    <li data-index="37"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Keeper" target="_blank" class="writeup-item"><span class="numero">37</span><h2>Keeper</h2></a></li>
+    <li data-index="38"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Wifinetic" target="_blank" class="writeup-item"><span class="numero">38</span><h2>Wifinetic</h2></a></li>
+    <li data-index="39"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Bashed" target="_blank" class="writeup-item"><span class="numero">39</span><h2>Bashed</h2></a></li>
+    <li data-index="40"><a href="https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Blue" target="_blank" class="writeup-item"><span class="numero">40</span><h2>Blue</h2></a></li>
+  </ul>
+
+  <div class="paginacion" id="paginacion"></div>
+</div>
+
+<div class="creditos">
+  <p>Desarrollado en 2025 por <strong>BunzoPy</strong>, con asistencia de <strong>ChatGPT</strong> para el desarrollo y contenido. La idea base de este diseño proviene de <a href="https://gunzf0x.github.io/" target="_blank" style="color: #39ff14; text-decoration: none;"><strong>gunzf0x</strong></a>.</p>
+</div>
+
+<script>
+  const writeupsPerPage = 10;
+  const writeupList = document.getElementById('writeup-list');
+  let writeups = Array.from(writeupList.querySelectorAll('li'));
+
+  // Invertir para que el número más alto quede arriba
+  writeups.reverse().forEach(li => writeupList.appendChild(li));
+  writeups = Array.from(writeupList.querySelectorAll('li'));
+
+  const paginacion = document.getElementById('paginacion');
+  let currentPage = 1;
+  const totalPages = Math.ceil(writeups.length / writeupsPerPage);
+
+  function mostrarPagina(page) {
+    currentPage = page;
+    let start = (page - 1) * writeupsPerPage;
+    let end = start + writeupsPerPage;
+
+    writeups.forEach((li, i) => {
+      li.style.display = (i >= start && i < end) ? 'block' : 'none';
+    });
+
+    actualizarPaginacion();
+  }
+
+  function actualizarPaginacion() {
+    paginacion.innerHTML = '';
+
+    for(let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      btn.classList.toggle('active', i === currentPage);
+      btn.addEventListener('click', () => mostrarPagina(i));
+      paginacion.appendChild(btn);
+    }
+  }
+
+  mostrarPagina(1);
+</script>
+
+</body>
+</html>
