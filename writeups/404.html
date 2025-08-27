@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo...</title>
+  <script>
+    // Diccionario de redirecciones: slug -> URL real en Obsidian
+    const redirects = {
+      "writeup": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Writeup",
+      "shocker": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Shocker",
+      "valentine": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Valentine",
+      "goodgames": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/GoodGames",
+      "curling": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Curling",
+      "meow": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Meow",
+      "fawn": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Fawn",
+      "dancing": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Windows/Dancing",
+      "redeemer": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Redeemer",
+      "explosion": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Windows/Explosion",
+      "preignition": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Preignition",
+      "mongod": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Mongod",
+      "synced": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+0/Linux/Synced",
+      "appointment": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Appointment",
+      "sequel": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Sequel",
+      "crocodile": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Crocodile",
+      "responder": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier%201/Windows/Responder",
+      "three": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Three",
+      "ignition": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Ignition",
+      "bike": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Bike",
+      "funnel": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Funnel",
+      "pennyworth": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Linux/Pennyworth",
+      "tactics": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+1/Windows/Tactics",
+      "archetype": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Windows/Archetype",
+      "oopsie": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Oopsie",
+      "vaccine": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Vaccine",
+      "unified": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Unified",
+      "included": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Included",
+      "markup": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Windows/Markup",
+      "base": "https://publish.obsidian.md/bunzopy/HTB/SuperFacil/Tier+2/Linux/Base",
+      "legacy": "https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Legacy",
+      "lame": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Lame",
+      "jerry": "https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Jerry",
+      "cap": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Cap",
+      "netmon": "https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Netmon",
+      "knife": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Knife",
+      "keeper": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Keeper",
+      "wifinetic": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Wifinetic",
+      "bashed": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Bashed",
+      "blue": "https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Blue",
+      "sau": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Sau",
+      "broker": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Broker",
+      "optimum": "https://publish.obsidian.md/bunzopy/HTB/Facil/Windows/Optimum",
+      "blocky": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Blocky",
+      "headless": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Headless",
+      "antique": "https://publish.obsidian.md/bunzopy/HTB/Facil/Linux/Antique"
+    };
+
+    // Detectar el slug de la URL
+    const pathParts = window.location.pathname.toLowerCase().split("/");
+    const slug = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+
+    if (redirects[slug]) {
+      window.location.replace(redirects[slug]);
+    } else {
+      // si no existe el slug, redirigir al índice
+      window.location.replace("/writeups");
+    }
+  </script>
+</head>
+<body style="background:black; color:#39ff14; font-family:monospace;">
+  <p>Redirigiendo...</p>
+</body>
+</html>
